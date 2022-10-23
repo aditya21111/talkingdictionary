@@ -40,13 +40,18 @@ def meaning(word):
     dict = PyDictionary()
     meaning=dict.meaning(word)
     synonyms = dict.synonym(word)
+    antonyms = dict.antonym(word)
     try:
         #iterating the value return by 'meaning' dictionary
         noun_meaning=meaning['Noun'][0]
+        
         print(f'{word} means {noun_meaning}')
         print(f'Synonmys are {synonyms[0] && synonyms[0]}, {synonyms[1] && synonyms[1]}, {synonyms[2] && synonyms[2]}')
+        speak(f'Antonyms are {antonyms[0] && antonyms[0]} {antonyms[1] && antonyms[1]} {antonyms[2] && antonyms[2]}')
+
         speak(f'{word} means {noun_meaning}')
         speak(f'Synonmys are {synonyms[0] && synonyms[0]} {synonyms[1] && synonyms[1]} {synonyms[2] && synonyms[2]}')
+        speak(f'Antonyms are {antonyms[0] && antonyms[0]} {antonyms[1] && antonyms[1]} {antonyms[2] && antonyms[2]}')
     except Exception as e:
         speak('unable to get the meaning please try another word')
         print('unable to get the meaning.please try another word')
